@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a.header {
+  background-color: #e2e2e2;
+  cursor: default;
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+<h2>One Liners</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()"
+placeholder="Search for names.." title="Type in a name">
+
+<p>A recent study has found that a women who carry a little extra weight live
+longer than men who mention it.</p>
+<p>If I had a dollar for every girl that found me unattractive, they would
+eventually find me attractive.</p>
+<p>Today a man knocked on my door and asked for a small donation to the local
+swimming pool, I gave him a glass of water.</p>
+<p>Life is all about perspective: The sinkning of the Titanic was a miracle to
+lobsters in the ship's kitchen.</p>
+<p>My wife and I were happy for 20 years, then we met.</p>
+<p>You know that tingly feeling you get whe you like someone, that's your common
+sense leaving your body.</p>
+<p>Relationships are a lot like algebra: Have you ever looked at you X and
+wondered Y?</p>
+<p>I want to die peacefully in my sleep like my grandfather, not screaming and
+yelling like the passengers in his car.</p>
+<p>I find it ironic that the colors red, white, and blue stand for freedom until
+they are flashing behind you.</p>
+<p>When wearing a bikini, women reveal 90% of their body...men are so polite
+they only look at the covered part.</p>
+<p>You know your ugly when it comes to a group picture and they hand you the
+camera.</p>
+<p>Life is like toilet paper, you're either on a rool or taking shit from an
+asshole.</p>
+<p>Isn't it great to live in the 21st century where deleting history has become
+more important than making it.</p>
+<p>Just read that 4,153,237 people got married lastnyear, not to cause any
+trouble but shouldn't that number be even?</p>
+<p>When my boss asked me who is the stupid one, me or him, so I told him
+everyone knows he doesn't hire stupid people</p>
+<p>You're not fat, you're just...easier to see.</p>
+<p>Strong people don't put others down, they lift them up and slam them on  the
+ground for maximum damage.</p>
+<p>How do I disable the autocorrect function on my wife?</p>
+<p>I can totally keep secrets, it's the people I tell them to that can't.</p>
+<p>Before I criticize a man I like to walk a mile in his shoes, thay way when I
+do criticize him, I'm a mile away and have his shoes.</p>
+<p>Teamwork is important; it helps to put the blame on someone else.</p>
+<p>Apparently I snore so loud loudly that it scares everyone in the car I'm
+driving.</p>
+<p>I'm great at multitasking: I can waste time, be unproductive, and
+procrastinate all at once.</p>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+
+        }
+    }
+}
+</script>
+
+</body>
+  </body>
+</html>
